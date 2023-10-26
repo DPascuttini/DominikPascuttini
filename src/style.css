@@ -6,6 +6,9 @@ html, body {
 }
 
 body {
+    font-family: "Stolzl Regular",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
     display: flex;
     flex-direction: column;
     height: 100%;
