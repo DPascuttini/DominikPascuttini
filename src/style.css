@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    height: 70px;
+    height: 40px;
     display: flex;
     align-items: center;
     background-color: #000;
@@ -104,7 +104,7 @@ video {
         border-color: transparent;
     }
     50% {
-        border-color: var(--orange-color);
+        border-color: white;
     }
 }
 

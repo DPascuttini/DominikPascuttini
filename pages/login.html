@@ -11,11 +11,11 @@
     <header>
         <nav>
             <div class="left-group">
-                <a href="./login.html">Prijavi se</a>
-                <a href="./index.html">Početna</a>
-                <a href="./about.html">O nama</a>
-                <a href="./news.html">Novosti</a>
-                <a href="./contact.html">Kontakt</a>
+                <a href="./login.html">Prijavi se <i class="fa-solid fa-right-to-bracket"></i> </a>            
+                <a href="./index.html"><i class="fa-solid fa-house"></i> Početna</a>
+                <a href="./about.html"><i class="fa-regular fa-comments"></i> O nama</a>
+                <a href="./news.html"><i class="fa-solid fa-circle-info"></i> Novosti</a>
+                <a href="./contact.html"><i class="fa-solid fa-envelope"></i> Kontakt</a>
             </div>
         </nav>
     </header>
@@ -23,10 +23,16 @@
     </main>
     <footer>
         <div class="login-form">
-            <h1>PRIJAVA KORISNIKA</h1>
-            <h2><b>Korisničko ime</b></h2>
-            <h2><b>Lozinka</b></h2>
-            <button class="login-button"></button>
+            <form id="login">
+                <h1>PRIJAVA KORISNIKA</h1>
+                <h2><b>Korisničko ime</b></h2>
+                <input type="text" id="username"/>
+                <br />
+                <h2><b>Lozinka</b></h2>
+                <input type="password" id="password" placeholder="Password" />    
+                <br />    
+                <button type="button" id="loginBtn">Login</button>
+            </form>
         </div>
         
     </footer>
