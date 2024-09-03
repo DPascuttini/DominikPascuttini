@@ -1,45 +1,17 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
 body {
     font-family: Arial,sans-serif;
-}
-
-header {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    justify-content: space-between;
-}
-
-nav {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    justify-content: space-between;
 }
 
 .fa-house , .fa-right-to-bracket, .fa-comments, .fa-circle-info, .fa-envelope {
     color: orange;
 }
 
-.left-group a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 10px;
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
 }
 
-.right-group a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0 10px;
+.nav-item.dropdown .dropdown-toggle::after {
+    display: none;
 }
+
+/*Smanjiti dropdown menu da ne uzima pol ekrana*/

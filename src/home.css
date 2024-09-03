@@ -1,3 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 main {
     flex: 1;
     width: 100%;
@@ -30,20 +37,23 @@ video {
 .bg-video-wrapper h1 {
     position: absolute;
     inset: 0;
-    max-width: 600px;
     height: max-content;
     color: #fff;
     margin: auto;
     text-align: center;
 }
 
-
 .typewriter :nth-child(1) {
     overflow: hidden;
     border-right: 3px solid #fff;
+    max-width: fit-content;
     white-space: nowrap;
     letter-spacing: 4px;
     animation: typing 3.5s steps(40, end), blink-cursor 1s step-end infinite;
+}
+
+.typewriter :nth-child(2){
+    color: orange;
 }
 
 
