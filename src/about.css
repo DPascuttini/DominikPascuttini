@@ -1,0 +1,59 @@
+*{
+    scroll-behavior: smooth;
+}
+main {
+    width: 100%;
+    overflow: auto;
+    display: grid;
+}
+
+
+.kampus {
+    object-fit: cover;
+    height: 40vh;
+    width: 100%;
+}
+
+.top-container{
+    margin: 10px, white;
+    background-color: white;
+    text-align: center;
+}
+
+.top-container h1{
+    font-size: 30px;
+    color: black;
+    border-bottom: 3px solid orange;
+    display: inline-block;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.top-container h2{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.goofyText{
+    background-color: #F5f5f5f5;
+    color: black;
+    padding: 30px;
+}
+
+.goofyText :nth-child(1){
+    padding-top: 30px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    font-family: 'Dancing script',cursive;
+}
+
+.goofyText :nth-child(2){
+    padding-top: 30px;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    font-family: 'Dancing script',cursive;
+}
