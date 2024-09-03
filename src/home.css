@@ -24,58 +24,26 @@ video {
     position: relative;
     overflow: hidden;
 }
-.bg-video-wrapper video {
-    min-width: 100%;
-    min-height: 100vh;
-}
 
-.bg-video-wrapper .overlay {
+
+#typewriter {
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    white-space: pre;
+    color: white;
     position: absolute;
-    inset: 0;
-}
-
-.bg-video-wrapper h1 {
-    position: absolute;
-    inset: 0;
-    height: max-content;
-    color: #fff;
-    margin: auto;
-    text-align: center;
-}
-
-.typewriter :nth-child(1) {
-    overflow: hidden;
-    border-right: 3px solid #fff;
-    max-width: fit-content;
-    white-space: nowrap;
-    letter-spacing: 4px;
-    animation: typing 3.5s steps(40, end), blink-cursor 1s step-end infinite;
-}
-
-.typewriter :nth-child(2){
-    color: orange;
-}
-
-
-/* Animacije za cursos */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-cursor {
-    from,
-    to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: white;
-    }
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    padding: 2px;
+  }
+    
+  .orange-text {
+    color: rgb(243, 81, 7);
+  }
 
 /*Responzivnost za manje ekrane*/
 @media (max-width: 768px) {
