@@ -31,8 +31,8 @@
     <main>
       <div class="login-container">
         <div class="login-form bg-light p-4">
-          <h1 class="text-center mb-4">PRIJAVA KORISNIKA</h1>
-          <form id="loginForm">
+          <h1 class="text-center mb-4">REGISTRACIJA KORISNIKA</h1>
+          <form id="registerForm">
             <div class="form-group mb-3">
               <label for="username">Korisničko ime</label>
               <input
@@ -53,12 +53,12 @@
                 required
               />
             </div>
-            <button type="submit" class="btn btn-login">Prijavi se</button>
+            <button type="submit" class="btn btn-register">
+              Registriraj se
+            </button>
           </form>
           <div class="form-footer mt-3">
-            <p>
-              Nemaš račun? <a href="../pages/register.html">Registriraj se</a>
-            </p>
+            <p>Već imate račun? <a href="../pages/login.html">Prijavi se</a></p>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="../src/script/navbar.js"></script>
-    <script src="../src/script/login.js"></script>
+    <script src="../src/script/register.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

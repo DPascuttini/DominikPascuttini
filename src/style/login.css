@@ -1,9 +1,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
+    margin: 0;
+    padding: 0; 
 }
 
-h1{
+h1 {
     font-size: 25px;
 }
 
@@ -11,7 +13,8 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    min-height: calc(100vh - 200px); 
+    margin-bottom: 200px; 
 }
 
 .login-form {
@@ -20,22 +23,31 @@ h1{
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
 .login-form .form-group {
     margin-bottom: 1rem;
 }
 
-.login-form .form-group label {
+.login-form label {
     font-weight: bold;
 }
 
-.login-form .form-group input {
+.login-form .form-control, 
+.login-form .form-group button {
     border-radius: 4px;
 }
 
-.login-form .form-group button {
+.login-form button {
     width: 100%;
+    background-color: darkgray;
+    border-color: darkgrey;
+}
+
+.login-form button:hover {
+    background: darkslategrey;
+    border-color: darkslategray;
 }
 
 .login-form .form-footer {
@@ -52,17 +64,6 @@ h1{
     text-decoration: underline;
 }
 
-.btn{
-    width: 100%;
-    background-color: darkgray;
-    border-color: darkgrey;
-}
-
-.btn:hover{
-    background: darkslategrey;
-    border-color: darkslategray
-}
-
 footer {
     height: 200px;
     background: url(../../img/zaiskri-bg.jpg) center/cover no-repeat;
@@ -77,15 +78,51 @@ footer {
     width: 100%;
 }
 
+footer h1, footer h2 {
+    margin: 0;
+}
+
 footer h1 {
     font-size: 50px;
-    margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 footer h2 {
     font-size: 40px;
-    margin: 0;
     color: orangered;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.btn-login,
+.btn-register {
+    width: 100%;
+    color:black;
+    background-color: darkgray;
+    border-color: darkgrey;
+}
+
+.btn-login:hover,
+.btn-register:hover {
+    color:white;
+    background: darkslategrey;
+    border-color: darkslategray;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        min-height: calc(100vh - 150px); 
+        margin-bottom: 150px; 
+    }
+
+    footer {
+        height: 150px; 
+    }
+
+    footer h1 {
+        font-size: 30px; 
+    }
+
+    footer h2 {
+        font-size: 25px; 
+    }
 }
