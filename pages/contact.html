@@ -1,86 +1,69 @@
-<!-- Modal -->
-<div
-  class="modal-dialog modal-dialog-centered"
-  id="contactModal"
-  tabindex="-1"
-  aria-labelledby="contactModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="contactModalLabel">Kontaktirajte nas</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
+<div id="contactModalOverlay" class="contact-modal-overlay">
+  <div class="contact-modal-content">
+    <h5>
+      <i class="fa-solid fa-envelope" style="color: darkblue"></i> Kontaktirajte
+      nas
+    </h5>
+    <form
+      id="contactForm"
+      action="https://www.fulek.com/mvc/supit/project-contact-form"
+      method="post"
+    >
+      <div class="form-group mb-3">
+        <label for="fullName">Puno ime</label>
+        <input
+          type="text"
+          id="fullName"
+          name="FullName"
+          class="form-control"
+          required
+        />
       </div>
-      <div class="modal-body">
-        <form id="contactForm">
-          <div class="mb-3">
-            <label for="fullName" class="form-label">Puno ime</label>
-            <input
-              type="text"
-              class="form-control"
-              id="fullName"
-              name="fullName"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input
-              type="email"
-              class="form-control"
-              id="email"
-              name="email"
-              required
-            />
-          </div>
-          <div class="mb-3">
-            <label for="importance" class="form-label">Važnost</label>
-            <select class="form-select" id="importance" name="importance">
-              <option value="Nisko">Nisko</option>
-              <option value="Srednje">Srednje</option>
-              <option value="Visoko">Visoko</option>
-            </select>
-          </div>
-          <div class="form-check mb-3">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="newsletter"
-              name="newsletter"
-            />
-            <label class="form-check-label" for="newsletter">
-              Želite li primati bilten?
-            </label>
-          </div>
-          <div class="mb-3">
-            <label for="message" class="form-label">Poruka</label>
-            <textarea
-              class="form-control"
-              id="message"
-              name="message"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Zatvori
-            </button>
-            <button type="submit" class="btn btn-primary">Pošalji</button>
-          </div>
-        </form>
+      <div class="form-group mb-3">
+        <label for="email">E-mail</label>
+        <input
+          type="email"
+          id="email"
+          name="Email"
+          class="form-control"
+          required
+        />
       </div>
-    </div>
+      <div class="form-group mb-3">
+        <label for="messageImportance">Važnost poruke</label>
+        <select id="messageImportance" name="Importance" class="form-select">
+          <option value="high">Visoka</option>
+          <option value="medium">Srednja</option>
+          <option value="low">Niska</option>
+        </select>
+      </div>
+      <div class="form-group mb-3">
+        <label for="message">Poruka</label>
+        <textarea
+          id="message"
+          name="Message"
+          rows="4"
+          class="form-control"
+          required
+        ></textarea>
+      </div>
+      <div class="form-check">
+        <label for="newsletter" class="form-check-label"
+          >Želim primati obavijesti</label
+        >
+        <input
+          type="checkbox"
+          id="newsletter"
+          name="ReceiveNewsletter"
+          class="form-check-input"
+        />
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Pošalji</button>
+        <button type="button" class="btn btn-danger" id="contactModalClose">
+          Odustani
+        </button>
+      </div>
+    </form>
   </div>
 </div>
-<script src="../src/script/contact.js"></script>
