@@ -22,13 +22,9 @@ function setupContactButton() {
           link.rel = 'stylesheet';
           link.href = '../../src/style/contact.css';
           document.head.appendChild(link);
-
-          // Close modal functionality
           document.getElementById('contactModalClose').addEventListener('click', () => {
             document.getElementById('contactModalOverlay').remove();
           });
-          
-          // No event.preventDefault in form submission to allow redirection
         })
         .catch(error => console.error('Error loading modal HTML:', error));
     });
