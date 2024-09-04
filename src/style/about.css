@@ -165,7 +165,7 @@ main {
 
 .mapContainer {
     padding-top: 50px;
-    background-image: url(../img/kakoDoNas.jpg);
+    background-image: url(../../img/kakoDoNas.jpg);
     background-repeat: no-repeat;
     background-size: cover; 
     height: 100%; 
@@ -219,7 +219,7 @@ main {
 
 footer {
     height: 300px;
-    background: url(../img/zaiskri-bg.jpg) center/cover no-repeat;
+    background: url(../../img/zaiskri-bg.jpg) center/cover no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
