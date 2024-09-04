@@ -1,0 +1,63 @@
+body{
+    padding-top: 80px;
+}
+
+.newspage {
+    margin-top: 200px;
+    height: 100%;
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
+}
+
+.newspage h1 {
+    margin: 0; 
+    border-bottom: 2px solid orange;
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+
+.row {
+    display: flex;
+    gap: 15px; 
+    margin-bottom: 20px; 
+}
+
+.col-md-4 {
+    flex: 1; 
+    padding: 0; 
+}
+
+footer {
+    height: 300px;
+    background: url(../img/zaiskri-bg.jpg) center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+}
+
+footer h1 {
+    font-size: 50px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+}
+
+footer h2 {
+    font-size: 40px;
+    margin: 0;
+    color: orangered;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+}
