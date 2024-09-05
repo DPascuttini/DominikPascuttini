@@ -1,6 +1,6 @@
 <!--jednostavno sam morao napraviti nekakvu kompnentu zbog manjka reacta :'( 
 
-linija 19: zasto se ne autoclosea specificno na "o nama dropdownu"?
+linija lost to time: zasto se ne autoclosea specificno na "o nama dropdownu"?
 -->
 
 <nav
@@ -16,20 +16,25 @@ linija 19: zasto se ne autoclosea specificno na "o nama dropdownu"?
       aria-controls="navbarSupportedContent"
       aria-expanded="false"
       aria-label="Toggle navigation"
-      data-bs-auto-close="true"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" style="color: white" href="../pages/login.html"
-            >Prijavi se
+        <li class="nav-item d-none" id="loginItem">
+          <a class="nav-link" style="color: white" href="../pages/login.html">
+            Prijavi se
             <i
               class="fa-solid fa-right-to-bracket"
               style="color: rgb(10, 178, 245)"
-            ></i
-          ></a>
+            ></i>
+          </a>
+        </li>
+        <li class="nav-item d-none" id="logoutItem">
+          <a class="nav-link" style="color: white" href="#" id="logoutLink">
+            Odjavi se
+            <i class="fa-solid fa-door-open" style="color: lightblue"></i>
+          </a>
         </li>
         <li class="nav-item">
           <a
@@ -37,43 +42,62 @@ linija 19: zasto se ne autoclosea specificno na "o nama dropdownu"?
             aria-current="page"
             style="color: white"
             href="../pages/home.html"
-            ><i class="fa-solid fa-house"></i> Početna</a
           >
+            <i class="fa-solid fa-house"></i> Početna
+          </a>
         </li>
         <li class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
-            style="color: white"
             href="../pages/about.html"
+            style="color: white"
             id="navbarDropdown"
             role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
+            data-bs-toggle="dropdown"
             aria-expanded="false"
-            ><i class="fa-regular fa-comments"></i> O nama
+          >
+            <i class="fa-regular fa-comments"></i> O nama
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../pages/about.html#vrijednosti"
-              >Naše vrijednosti</a
-            >
-            <a class="dropdown-item" href="../pages/about.html#povijest"
-              >Povijest</a
-            >
-            <a class="dropdown-item" href="../pages/about.html#agrupa"
-              >Algebra grupa</a
-            >
-            <a class="dropdown-item" href="../pages/about.html#kakoDoNas"
-              >Kako do nas</a
-            >
-          </div>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <a class="dropdown-item" href="../pages/about.html#vrijednosti"
+                >Naše vrijednosti</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/about.html#povijest"
+                >Povijest</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/about.html#agrupa"
+                >Algebra grupa</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="../pages/about.html#kakoDoNas"
+                >Kako do nas</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white" href="../pages/news.html"
-            ><i class="fa-solid fa-circle-info"></i> Novosti</a
+          <a class="nav-link" style="color: white" href="../pages/news.html">
+            <i class="fa-solid fa-circle-info"></i> Novosti
+          </a>
+        </li>
+        <li class="nav-item d-none" id="nastavniPlanItem">
+          <a
+            class="nav-link"
+            style="color: white"
+            href="../pages/nastavniPlan.html"
           >
+            <i class="fa-solid fa-circle-info"></i> Nastavni Plan
+          </a>
         </li>
         <li class="nav-item">
           <button
+            id="contactLink"
             class="nav-link btn"
             style="
               color: white;
@@ -81,7 +105,6 @@ linija 19: zasto se ne autoclosea specificno na "o nama dropdownu"?
               background: none;
               border: none;
             "
-            id="contactLink"
           >
             <i class="fa-solid fa-envelope"></i> Kontakt
           </button>
