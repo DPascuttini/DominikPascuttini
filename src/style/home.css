@@ -45,7 +45,7 @@ video {
     color: rgb(243, 81, 7);
   }
 
-/*Responzivnost za manje ekrane*/
+
 @media (max-width: 768px) {
     header {
         height: 50px;
