@@ -1,41 +1,95 @@
-body{
-    padding-top: 80px;
-}
-
-.newspage {
-    margin-top: 200px;
-    height: 100%;
-    width: 100%; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column; 
-}
-
-.newspage h1 {
-    margin: 0; 
-    border-bottom: 2px solid orange;
-}
-
-.container {
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-}
-
-.row {
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  main {
+    padding-top: 20px; 
+    margin-top: 100px; 
+  }
+  
+  .container {
     display: flex;
-    gap: 15px; 
-    margin-bottom: 20px; 
-}
-
-.col-md-4 {
-    flex: 1; 
-    padding: 0; 
-}
-
-footer {
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    /*background-color: rgba(241, 241, 241, 0.637);  Width nije kako treba...*/ 
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+  }
+  
+  .box {
+    width: 300px;
     height: 300px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 20px;
+    transition: transform 0.3s ease;
+    border: 20px solid rgb(248, 248, 248); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .box:hover {
+    transform: scale(1.05);
+  }
+  
+  .box a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+  }
+  
+  .box .circleTxt {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-weight: 100;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  }
+  
+  .spanColor {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #FFD700; 
+  }
+  
+  .circleTxt {
+    display: block;
+    text-align: center;
+    line-height: 1.2em;
+  }
+  
+  .box a:hover {
+    text-decoration: none;
+  }
+  
+
+  footer {
+    height: 200px;
     background: url(../../img/zaiskri-bg.jpg) center/cover no-repeat;
     color: white;
     display: flex;
@@ -46,18 +100,17 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    overflow: auto;
 }
 
 footer h1 {
     font-size: 50px;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
 }
 
 footer h2 {
     font-size: 40px;
-    margin: 0;
     color: orangered;
+    margin: 0;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
 }
